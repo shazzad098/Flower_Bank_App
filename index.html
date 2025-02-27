@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font awesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <title>Flower Bank App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-zinc-900 min-h-screen w-screen overflow-x-hidden text-white font-ubuntu">
+  <!-- Header Section  -->
+  <div class="text-4xl text-white flex justify-center space-x-2 mt-6">
+    <i class="fa-solid fa-building-columns"></i>
+    <h1 class="font-ubuntu">Flower Bank App</h1>
+  </div>
+
+  <!-- Balance Update Section  -->
+  <div
+    class="border border-stone-600 rounded-md flex flex-col justify-center items-center gap-4 p-6 w-[90%] mx-auto mt-8 sm:w-[80%] md:w-[70%] lg:w-[50%]">
+    <p class="text-gray-400 text-sm">Available Balance</p>
+    <h2 id="balance" class="text-4xl font-bold">$0.00</h2>
+    <div class="flex flex-col sm:flex-row gap-4 mt-2">
+      <button id="addMoneyBtn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md flex items-center gap-2 justify-center">
+        <i class="fa-solid fa-plus"></i>
+        <span class="hidden sm:inline">Add Money</span>
+      </button>
+      <button id="withdrawBtn" class="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md flex items-center gap-2 justify-center">
+        <i class="fa-solid fa-minus"></i>
+        <span class="hidden sm:inline">Withdraw</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
