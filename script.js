@@ -80,3 +80,27 @@ function renderTransactions() {
     });
 }
 
+ // Add a new transaction
+ function addTransaction(description, amount, isDeposit) {
+    const transaction = {
+      date: new Date(),
+      description: description || (isDeposit ? "Deposit" : "Withdrawal"),
+      type: isDeposit ? "Add Money" : "Withdraw",
+      amount: amount,
+      isDeposit: isDeposit,
+    };
+  
+    transactions.unshift(transaction);
+  
+    // Update balance
+    if (isDeposit) {
+      currentBalance += amount;
+    } else {
+      currentBalance -= amount;
+    }
+  
+    // Update UI
+    updateBalanceDisplay();
+    renderTransactions();
+  }
+  
