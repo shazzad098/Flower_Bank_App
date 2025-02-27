@@ -104,3 +104,16 @@ function renderTransactions() {
     renderTransactions();
   }
   
+  // Show modal for adding or withdrawing money
+  function showTransactionModal(deposit) {
+    isDeposit = deposit;
+    modalTitle.textContent = deposit ? "Add Money" : "Withdraw Money";
+    confirmBtn.className = deposit
+      ? "px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded"
+      : "px-4 py-2 bg-red-600 hover:bg-red-700 rounded";
+  
+    amountInput.value = "";
+    descriptionInput.value = "";
+    transactionModal.classList.remove("hidden");
+  }
+  
