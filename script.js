@@ -151,7 +151,12 @@ function initApp() {
     transactionModal.classList.add("hidden");
   });
 
-
+  // Close modal when clicking outside
+  transactionModal.addEventListener("click", (e) => {
+    if (e.target === transactionModal) {
+      transactionModal.classList.add("hidden");
+    }
+  });
 }
 
 // Initialize the app when the DOM is loaded
